@@ -1,0 +1,165 @@
+/* src/components/Home.css */
+
+
+/* Carousel */
+.carousel-item img {
+  height: 500px; /* Adjust as needed */
+  object-fit: cover;
+}
+
+/* Statistics Section */
+.statistics {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.statistics h1 {
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.stat-card:hover {
+  background-color: #e2e6ea;
+}
+
+.stat-card h2 {
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.stat-card p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #343a40;
+}
+
+/* Testimonials Section */
+.testimonials {
+  margin-bottom: 40px;
+}
+
+.testimonials h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.testimonial-card {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.testimonial-card p {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.testimonial-card h4 {
+  margin: 0;
+  color: #007bff;
+}
+
+/* Offer of the Day Section */
+.offer-of-the-day {
+  text-align: center;
+}
+
+.offer-of-the-day h1 {
+  margin-bottom: 20px;
+}
+
+.offer-of-the-day p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.offer-of-the-day .btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+/* src/components/Home.css */
+
+/* Footer */
+.footer {
+  background-color: #343a40;
+  color: #f8f9fa;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+.footer h4 {
+  color: #007bff;
+}
+
+.footer p {
+  margin-bottom: 10px;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 10px;
+}
+
+.footer ul li a {
+  color: #f8f9fa;
+  text-decoration: none;
+}
+
+.footer ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer .social-media {
+  list-style: none;
+  padding: 0;
+}
+
+.footer .social-media li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.footer .social-media li a {
+  color: #f8f9fa;
+  text-decoration: none;
+}
+
+.footer .social-media li a:hover {
+  text-decoration: underline;
+}
+
+.footer .text-center {
+  margin-top: 20px;
+}
+
+/* src/components/Home.css */
+
+/* Offer of the Day Banner */
+.offer-of-the-day-banner {
+  background-color: #007bff;
+  color: #fff;
+  text-align: center;
+    font-size: 1.2rem;
+}
+
+.offer-of-the-day-banner p {
+  margin: 0;
+  font-weight: bold;
+}
+

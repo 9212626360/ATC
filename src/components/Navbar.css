@@ -1,0 +1,28 @@
+/* src/components/Navbar.css */
+.navbar {
+  border-bottom: 1px solid #dee2e6;
+}
+
+.contact-info {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #f8f9fa;
+  padding: 10px;
+  font-size: 0.9rem;
+  color: #343a40;
+}
+
+.contact-info p {
+  margin: 0;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+/* Ensure that the navbar expands properly */
+.navbar-collapse {
+  display: flex;
+  flex-direction: row;
+}

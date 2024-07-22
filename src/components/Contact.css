@@ -1,0 +1,22 @@
+/* src/components/Contact.css */
+.contact {
+  padding: 40px 0;
+}
+
+.contact h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-top: 20px;
+}
+
+.contact .row {
+  align-items: center;
+}
+
+.contact p {
+  margin-bottom: 10px;
+}
+
+.contact img {
+  border-radius: 5px;
+}

@@ -1,0 +1,23 @@
+/* src/components/Courses.css */
+.courses {
+  padding: 40px 0;
+}
+
+.courses h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-top: 20px;
+}
+
+.courses .row {
+  align-items: center;
+}
+
+.courses .col-md-4 {
+  margin-bottom: 20px;
+}
+
+.courses img {
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
