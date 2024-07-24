@@ -15,7 +15,7 @@ const Contact = () => {
             <p><strong>Location:</strong> Palam Colony (Kailash Puri), near JBM Public School</p>
           </div>
           <div className="col-md-6">
-            <img src="https://via.placeholder.com/600x400" alt="Contact Us" className="img-fluid" />
+            <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*U4gZLnRtHEeJuc6tdVLwPw.pnghttps://via.placeholder.com/600x400" alt="Contact Us" className="img-fluid" />
           </div>
         </div>
       </div>
