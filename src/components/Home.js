@@ -16,7 +16,7 @@ const Home = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*U4gZLnRtHEeJuc6tdVLwPw.png"
+            src="/Assets/testing.jpg"
             alt="First slide"
           />
           <Carousel.Caption>
@@ -27,7 +27,7 @@ const Home = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*U4gZLnRtHEeJuc6tdVLwPw.png"
+            src="/Assets/testing.jpg"
             alt="Second slide"
           />
           <Carousel.Caption>
@@ -38,7 +38,7 @@ const Home = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*U4gZLnRtHEeJuc6tdVLwPw.png"
+            src="/Assets/testing.jpg"
             alt="Third slide"
           />
           <Carousel.Caption>
