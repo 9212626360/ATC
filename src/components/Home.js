@@ -1,16 +1,31 @@
-// src/components/Home.js
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Home.css';
-import Carousel from 'react-bootstrap/Carousel'; // Import Carousel
+import Carousel from 'react-bootstrap/Carousel';
 
 const Home = () => {
+  const [showWelcomeSection, setShowWelcomeSection] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Correct the query selector to match Bootstrap's carousel class
+      const carouselHeight = document.querySelector('.carousel-inner').offsetHeight;
+      // Check scroll position against carousel height
+      if (window.scrollY > carouselHeight) {
+        setShowWelcomeSection(true);
+      } else {
+        setShowWelcomeSection(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <div className="home">
-      {/* Offer of the Day Section Below Navbar */}
-      <div className="offer-of-the-day-banner">
-        <p>Offer of the Day: Enroll in advance Excel course with a free typing course!</p>
-      </div>
-
       {/* Carousel Section */}
       <Carousel>
         <Carousel.Item>
@@ -47,6 +62,17 @@ const Home = () => {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
+
+      {/* Welcome Section - This section will appear on scroll */}
+      <div className={`welcome-section ${showWelcomeSection ? 'show' : ''}`}>
+        <h1>WELCOME TO ATC</h1>
+        <blockquote>
+          "The child must know that he is a miracle, that since the beginning of the world
+          there hasn't been, and until the end of the world there will not be,
+          another child like him."
+        </blockquote>
+        <footer>- PABLO CASALS</footer>
+      </div>
 
       {/* Statistics Section */}
       <div className="statistics">

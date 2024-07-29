@@ -1,10 +1,42 @@
-/* src/components/Home.css */
-
-
 /* Carousel */
 .carousel-item img {
-  height: 500px; /* Adjust as needed */
+  height: 720px; /* Adjust as needed */
   object-fit: cover;
+}
+
+/* Welcome Section */
+.welcome-section {
+  /* opacity: 0; */
+  /* transform: translateX(-100%);  */
+  /* transition: opacity 0.8s ease, transform 0.8s ease;  */
+  padding: 60px 20px;
+  background-color: #f8f9fa; 
+  text-align: center;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+.welcome-section.show {
+  /* opacity: 1; */
+  transform: translateX(0); /* Move to the original position */
+}
+
+.welcome-section h1 {
+  font-size: 2.5rem;
+  color: #007bff; /* Primary color for the heading */
+  margin-bottom: 20px;
+}
+
+.welcome-section blockquote {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin: 0 20px 20px 20px;
+  color: #343a40; /* Dark gray text color */
+}
+
+.welcome-section footer {
+  font-size: 1rem;
+  color: #555; /* Slightly lighter gray for the footer */
 }
 
 /* Statistics Section */
@@ -89,8 +121,6 @@
   border-color: #007bff;
 }
 
-/* src/components/Home.css */
-
 /* Footer */
 .footer {
   background-color: #343a40;
@@ -148,18 +178,15 @@
   margin-top: 20px;
 }
 
-/* src/components/Home.css */
-
 /* Offer of the Day Banner */
 .offer-of-the-day-banner {
   background-color: #007bff;
   color: #fff;
   text-align: center;
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 .offer-of-the-day-banner p {
   margin: 0;
   font-weight: bold;
 }
-

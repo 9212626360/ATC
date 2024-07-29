@@ -1,28 +1,37 @@
 /* src/components/Navbar.css */
+
 .navbar {
-  border-bottom: 1px solid #dee2e6;
-}
-
-.contact-info {
-  position: absolute;
+  position: fixed;
   top: 0;
-  right: 0;
-  background-color: #f8f9fa;
-  padding: 10px;
-  font-size: 0.9rem;
-  color: #343a40;
+  width: 100%;
+  z-index: 10;
+  /* background: rgba(0, 0, 0, 0.5); 
+  transition: background-color 0.3s; */
+  background: transparent; /* Initially transparent */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.contact-info p {
-  margin: 0;
+.navbar-brand {
+  font-weight: bold;
 }
 
-.navbar-nav {
-  margin-left: auto;
+.navbar-nav .nav-item .nav-link {
+  color: white;
+  transition: color 0.3s;
 }
 
-/* Ensure that the navbar expands properly */
-.navbar-collapse {
-  display: flex;
-  flex-direction: row;
+.navbar-nav .nav-item .nav-link:hover {
+  color: #ffd700; /* Gold color on hover */
+}
+
+.navbar-toggler {
+  border-color: white;
+}
+
+.navbar-toggler-icon {
+  background-color: white;
+}
+
+.navbar-scrolled {
+  background: rgba(0, 0, 0, 0.8); /* Darker background when scrolled */
 }
