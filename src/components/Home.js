@@ -30,7 +30,7 @@ const imageSectionData = [
 
 const Home = () => {
   const [showWelcomeSection, setShowWelcomeSection] = useState(false);
-  const [currentAnnouncementIndex, setCurrentAnnouncementIndex] = useState(0);
+  const [showAnnouncements, setShowAnnouncements] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,21 +42,36 @@ const Home = () => {
       }
     };
 
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setShowAnnouncements(true);
+          } else {
+            setShowAnnouncements(false);
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
     window.addEventListener('scroll', handleScroll);
+
+    const announcementSection = document.querySelector('.news-announcements');
+    if (announcementSection) {
+      observer.observe(announcementSection);
+    }
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      if (announcementSection) {
+        observer.unobserve(announcementSection);
+      }
     };
   }, []);
 
-  const handleNextAnnouncement = () => {
-    setCurrentAnnouncementIndex((prevIndex) => (prevIndex + 1) % announcements.length);
-  };
-
-  const handlePrevAnnouncement = () => {
-    setCurrentAnnouncementIndex((prevIndex) => (prevIndex - 1 + announcements.length) % announcements.length);
-  };
-
-  const currentAnnouncement = announcements[currentAnnouncementIndex];
 
   return (
     <div className="home">
@@ -109,25 +124,23 @@ const Home = () => {
       </div>
 
       {/* News & Announcements Section */}
-      <div className="news-announcements">
-        <h2>NEWS & ANNOUNCEMENTS</h2>
-        <div className="announcement-carousel">
-          <div className="announcement-card">
-            <h3>{currentAnnouncement.date}</h3>
-            <h4>{currentAnnouncement.title}</h4>
-            <p>{currentAnnouncement.content}</p>
-            <a href="/components/About.js" className="more-info">MORE INFO</a>
-          </div>
-          <div className="arrow-buttons">
-            <button onClick={handlePrevAnnouncement}>&lt;</button>
-            <button onClick={handleNextAnnouncement}>&gt;</button>
-          </div>
+      <div className={`news-announcements ${showAnnouncements ? 'show' : ''}`}>
+      <h2 style={{ textAlign: 'center' }}>NEWS & ANNOUNCEMENTS</h2>
+      <div className="announcement-carousel">
+          {announcements.map((announcement, index) => (
+            <div key={index} className="announcement-card">
+              <h3>{announcement.date}</h3>
+              <h4>{announcement.title}</h4>
+              <p>{announcement.content}</p>
+              <a href="#" className="more-info">MORE INFO</a>
+            </div>
+          ))}
         </div>
       </div>
 
       {/* Image Section */}
       <div className="image-section">
-        <h2>Explore Our Gallery</h2>
+        <h2 >Explore Our Gallery</h2>
         <div className="image-grid">
           {imageSectionData.map((image, index) => (
             <div key={index} className="image-card">
@@ -140,7 +153,7 @@ const Home = () => {
 
       {/* Explore ATC Section */}
       <div className="explore-atc">
-        <h2>Explore ATC</h2>
+        <h2 style={{ textAlign: 'center' }}>Explore ATC</h2>
         <div className="explore-cards">
           <div className="explore-card">
             <h3>Course Overview</h3>
@@ -150,12 +163,12 @@ const Home = () => {
           <div className="explore-card">
             <h3>Our Campus</h3>
             <p>Experience our state-of-the-art facilities and resources.</p>
-            <a href="/About.js" className="more-info">TAKE A TOUR</a>
+            <a href="/About" className="more-info">TAKE A TOUR</a>
           </div>
           <div className="explore-card">
             <h3>Faculty & Staff</h3>
             <p>Meet our experienced and dedicated team of educators.</p>
-            <a href="/About.js" className="more-info">MEET THE TEAM</a>
+            <a href="/About" className="more-info">MEET THE TEAM</a>
           </div>
         </div>
       </div>

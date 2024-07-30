@@ -1,18 +1,20 @@
-/* src/components/Navbar.css */
-
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 10;
-  /* background: rgba(0, 0, 0, 0.5); 
-  transition: background-color 0.3s; */
-  background: black; /* Initially transparent */
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  background: transparent; /* Initially transparent */
+  transition: background-color 0.1s ease, box-shadow 0.1s ease;
+}
+
+.navbar-scrolled {
+  background: black; /* Black background when scrolled or not on the home page */
 }
 
 .navbar-brand {
-  font-weight: bold;
+  color: white;
+  transition: color 0.3s;
+
 }
 
 .navbar-nav .nav-item .nav-link {
@@ -30,8 +32,4 @@
 
 .navbar-toggler-icon {
   background-color: white;
-}
-
-.navbar-scrolled {
-  background: rgba(0, 0, 0, 0.8); /* Darker background when scrolled */
 }

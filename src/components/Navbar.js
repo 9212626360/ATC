@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation(); // Hook to get the current route
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,8 +21,11 @@ const Navbar = () => {
     };
   }, []);
 
+  // Determine if the navbar should be transparent
+  const isHomePage = location.pathname === '/';
+
   return (
-    <nav className={`navbar navbar-expand-lg navbar-dark ${scrolled ? 'navbar-scrolled' : ''}`}>
+    <nav className={`navbar navbar-expand-lg ${scrolled || !isHomePage ? 'navbar-scrolled' : ''}`}>
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">Aggarwal Typing College</Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
