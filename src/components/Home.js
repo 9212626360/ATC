@@ -22,9 +22,9 @@ const announcements = [
 ];
 
 const imageSectionData = [
-  { src: '/Assets/demo1.jpg', label: 'Demo 1' },
-  { src: '/Assets/demo2.jpg', label: 'Demo 2' },
-  { src: '/Assets/demo3.jpg', label: 'Demo 3' },
+  { src: '/Assets/ATC LOGO.jpeg', label: 'Demo 1' },
+  { src: '/Assets/ATC LOGO.jpeg', label: 'Demo 2' },
+  { src: '/Assets/ATC LOGO.jpeg', label: 'Demo 3' },
   // Add more images as needed
 ];
 
@@ -80,7 +80,7 @@ const Home = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="/Assets/testing.jpg"
+            src="/Assets/GROUP.jpeg"
             alt="First slide"
           />
           <Carousel.Caption>
@@ -91,7 +91,7 @@ const Home = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="/Assets/testing.jpg"
+            src="/Assets/GROUP2.jpeg"
             alt="Second slide"
           />
           <Carousel.Caption>
@@ -102,7 +102,7 @@ const Home = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="/Assets/testing.jpg"
+            src="/Assets/GROUP3.jpeg"
             alt="Third slide"
           />
           <Carousel.Caption>
@@ -110,11 +110,34 @@ const Home = () => {
             <p>Enroll now to take advantage of our special offers!</p>
           </Carousel.Caption>
         </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="/Assets/GROUP4.jpeg"
+            alt="Third slide"
+          />
+          <Carousel.Caption>
+            <h3>Join Us Today!</h3>
+            <p>Enroll now to take advantage of our special offers!</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="/Assets/5.jpeg"
+            alt="Third slide"
+          />
+          <Carousel.Caption>
+            <h3>Join Us Today!</h3>
+            <p>Enroll now to take advantage of our special offers!</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+     
       </Carousel>
 
       {/* Welcome Section */}
       <div className={`welcome-section ${showWelcomeSection ? 'show' : ''}`}>
-        <h1>WELCOME TO ATC</h1>
+        <h2 style={{ color: '#032d64' }}>WELCOME TO ATC</h2>
         <blockquote>
           "The child must know that he is a miracle, that since the beginning of the world
           there hasn't been, and until the end of the world there will not be,

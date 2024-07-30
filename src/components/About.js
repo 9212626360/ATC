@@ -17,7 +17,7 @@ const About = () => {
             </p>
           </div>
           <div className="col-md-6">
-            <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*U4gZLnRtHEeJuc6tdVLwPw.png" alt="About Us" className="img-fluid" />
+            <img src="/Assets/CircleBanner.jpeg" alt="About Us" className="img-fluid" />
           </div>
         </div>
       </div>
