@@ -145,17 +145,17 @@ const Home = () => {
           <div className="explore-card">
             <h3>Course Overview</h3>
             <p>Discover our wide range of courses designed to suit all levels.</p>
-            <a href="/components/About.js" className="more-info">LEARN MORE</a>
+            <a href="/About" className="more-info">LEARN MORE</a>
           </div>
           <div className="explore-card">
             <h3>Our Campus</h3>
             <p>Experience our state-of-the-art facilities and resources.</p>
-            <a href="/components/About.js" className="more-info">TAKE A TOUR</a>
+            <a href="/About.js" className="more-info">TAKE A TOUR</a>
           </div>
           <div className="explore-card">
             <h3>Faculty & Staff</h3>
             <p>Meet our experienced and dedicated team of educators.</p>
-            <a href="/components/About.js" className="more-info">MEET THE TEAM</a>
+            <a href="/About.js" className="more-info">MEET THE TEAM</a>
           </div>
         </div>
       </div>
