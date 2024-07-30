@@ -1,140 +1,208 @@
-/* Carousel */
-.carousel-item img {
-  height: 720px; /* Adjust as needed */
-  object-fit: cover;
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Arial', sans-serif;
 }
 
 /* Welcome Section */
 .welcome-section {
-  /* opacity: 0; */
-  /* transform: translateX(-100%);  */
-  /* transition: opacity 0.8s ease, transform 0.8s ease;  */
-  padding: 60px 20px;
-  background-color: #f8f9fa; 
+  padding: 2rem;
+  background-color: #f5f5f5;
   text-align: center;
-  margin-top: 30px;
-  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
 }
 
 .welcome-section.show {
-  /* opacity: 1; */
-  transform: translateX(0); /* Move to the original position */
+  margin-top: 20px;
+  animation: fadeIn 1s;
 }
 
-.welcome-section h1 {
-  font-size: 2.5rem;
-  color: #007bff; /* Primary color for the heading */
-  margin-bottom: 20px;
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
-.welcome-section blockquote {
-  font-size: 1.2rem;
-  font-style: italic;
-  margin: 0 20px 20px 20px;
-  color: #343a40; /* Dark gray text color */
+/* News & Announcements */
+.news-announcements {
+  padding: 2rem;
+  background-color: #eaeaea;
 }
 
-.welcome-section footer {
-  font-size: 1rem;
-  color: #555; /* Slightly lighter gray for the footer */
+.announcement-carousel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Statistics Section */
-.statistics {
-  text-align: center;
-  margin: 40px 0;
-}
-
-.statistics h1 {
-  margin-bottom: 30px;
-}
-
-.stat-card {
-  background-color: #f8f9fa;
-  border: 1px solid #dee2e6;
+.announcement-card {
+  flex: 1;
+  padding: 1rem;
+  background-color: white;
   border-radius: 8px;
-  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-  transition: background-color 0.3s;
 }
 
-.stat-card:hover {
-  background-color: #e2e6ea;
+.announcement-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
 }
 
-.stat-card h2 {
-  margin-bottom: 10px;
-  color: #007bff;
-}
-
-.stat-card p {
+.announcement-card h4 {
   font-size: 1.5rem;
-  font-weight: bold;
-  color: #343a40;
+  margin-bottom: 1rem;
 }
 
-/* Testimonials Section */
-.testimonials {
-  margin-bottom: 40px;
+.announcement-card p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
 }
 
-.testimonials h1 {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.testimonial-card {
-  background-color: #f8f9fa;
-  border: 1px solid #dee2e6;
-  border-radius: 8px;
-  padding: 20px;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.testimonial-card p {
-  font-style: italic;
-  margin-bottom: 10px;
-}
-
-.testimonial-card h4 {
-  margin: 0;
+.announcement-card .more-info {
+  font-size: 0.9rem;
   color: #007bff;
+  text-decoration: none;
 }
 
-/* Offer of the Day Section */
-.offer-of-the-day {
+.arrow-buttons button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 0.5rem;
+}
+
+.arrow-buttons button:hover {
+  background-color: #0056b3;
+}
+
+/* Image Section */
+.image-section {
+  padding: 2rem;
+  text-align: center;
+  background-color: #f5f5f5;
+}
+
+.image-section h2 {
+  margin-bottom: 2rem;
+}
+
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.image-card {
+  position: relative;
+  width: 200px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-card:hover {
+  transform: scale(1.05);
+}
+
+.image-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+/* Explore ATC Section */
+.explore-atc {
+  padding: 2rem;
+  background-color: #eaeaea;
+}
+
+.explore-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.explore-card {
+  width: 300px;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-.offer-of-the-day h1 {
-  margin-bottom: 20px;
+.explore-card h3 {
+  margin-bottom: 1rem;
 }
 
-.offer-of-the-day p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
+.explore-card p {
+  margin-bottom: 1.5rem;
 }
 
-.offer-of-the-day .btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
+.explore-card .more-info {
+  font-size: 0.9rem;
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* Glory Galore Section */
+.glory-galore {
+  padding: 2rem;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.glory-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.glory-card {
+  width: 300px;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.glory-card h3 {
+  margin-bottom: 1rem;
 }
 
 /* Footer */
 .footer {
-  background-color: #343a40;
-  color: #f8f9fa;
-  padding: 20px 0;
-  margin-top: 40px;
+  background-color: #333;
+  color: white;
+  padding: 2rem 0;
 }
 
 .footer h4 {
-  color: #007bff;
-}
-
-.footer p {
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 
 .footer ul {
@@ -143,50 +211,34 @@
 }
 
 .footer ul li {
-  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
 }
 
 .footer ul li a {
-  color: #f8f9fa;
+  color: #999;
   text-decoration: none;
 }
 
 .footer ul li a:hover {
-  text-decoration: underline;
+  color: white;
 }
 
-.footer .social-media {
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-media li {
   list-style: none;
-  padding: 0;
 }
 
-.footer .social-media li {
-  display: inline;
-  margin-right: 10px;
-}
-
-.footer .social-media li a {
-  color: #f8f9fa;
+.social-media a {
+  color: #999;
+  font-size: 1.5rem;
   text-decoration: none;
 }
 
-.footer .social-media li a:hover {
-  text-decoration: underline;
-}
-
-.footer .text-center {
-  margin-top: 20px;
-}
-
-/* Offer of the Day Banner */
-.offer-of-the-day-banner {
-  background-color: #007bff;
-  color: #fff;
-  text-align: center;
-  font-size: 1.2rem;
-}
-
-.offer-of-the-day-banner p {
-  margin: 0;
-  font-weight: bold;
+.social-media a:hover {
+  color: white;
 }

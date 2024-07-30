@@ -2,14 +2,39 @@ import React, { useEffect, useState } from 'react';
 import './Home.css';
 import Carousel from 'react-bootstrap/Carousel';
 
+const announcements = [
+  {
+    date: '22 Apr',
+    title: 'Congratulations to Ashish Bhardwaj',
+    content: 'A Beacon of Excellence for Gurukul The School Alumni!',
+  },
+  {
+    date: '14 Apr',
+    title: 'Gurukul The School proudly celebrates',
+    content: 'its 23rd Foundation Day!',
+  },
+  {
+    date: '28 Mar',
+    title: 'Celebrating Ms. Chitra Sharma',
+    content: "Remarkable Achievement in International Teachers' Olympiad",
+  },
+  // Add more announcements as needed
+];
+
+const imageSectionData = [
+  { src: '/Assets/demo1.jpg', label: 'Demo 1' },
+  { src: '/Assets/demo2.jpg', label: 'Demo 2' },
+  { src: '/Assets/demo3.jpg', label: 'Demo 3' },
+  // Add more images as needed
+];
+
 const Home = () => {
   const [showWelcomeSection, setShowWelcomeSection] = useState(false);
+  const [currentAnnouncementIndex, setCurrentAnnouncementIndex] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      // Correct the query selector to match Bootstrap's carousel class
       const carouselHeight = document.querySelector('.carousel-inner').offsetHeight;
-      // Check scroll position against carousel height
       if (window.scrollY > carouselHeight) {
         setShowWelcomeSection(true);
       } else {
@@ -18,11 +43,20 @@ const Home = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  const handleNextAnnouncement = () => {
+    setCurrentAnnouncementIndex((prevIndex) => (prevIndex + 1) % announcements.length);
+  };
+
+  const handlePrevAnnouncement = () => {
+    setCurrentAnnouncementIndex((prevIndex) => (prevIndex - 1 + announcements.length) % announcements.length);
+  };
+
+  const currentAnnouncement = announcements[currentAnnouncementIndex];
 
   return (
     <div className="home">
@@ -63,7 +97,7 @@ const Home = () => {
         </Carousel.Item>
       </Carousel>
 
-      {/* Welcome Section - This section will appear on scroll */}
+      {/* Welcome Section */}
       <div className={`welcome-section ${showWelcomeSection ? 'show' : ''}`}>
         <h1>WELCOME TO ATC</h1>
         <blockquote>
@@ -74,67 +108,75 @@ const Home = () => {
         <footer>- PABLO CASALS</footer>
       </div>
 
-      {/* Statistics Section */}
-      <div className="statistics">
-        <h1>Our Achievements</h1>
-        <div className="row">
-          <div className="col-md-3">
-            <div className="stat-card">
-              <h2>Total Students</h2>
-              <p>5000+</p>
-            </div>
+      {/* News & Announcements Section */}
+      <div className="news-announcements">
+        <h2>NEWS & ANNOUNCEMENTS</h2>
+        <div className="announcement-carousel">
+          <div className="announcement-card">
+            <h3>{currentAnnouncement.date}</h3>
+            <h4>{currentAnnouncement.title}</h4>
+            <p>{currentAnnouncement.content}</p>
+            <a href="#" className="more-info">MORE INFO</a>
           </div>
-          <div className="col-md-3">
-            <div className="stat-card">
-              <h2>Students Passed</h2>
-              <p>4000+</p>
-            </div>
-          </div>
-          <div className="col-md-3">
-            <div className="stat-card">
-              <h2>Jobs Found</h2>
-              <p>100+</p>
-            </div>
-          </div>
-          <div className="col-md-3">
-            <div className="stat-card">
-              <h2>Market Score</h2>
-              <p>4.5/5</p>
-            </div>
+          <div className="arrow-buttons">
+            <button onClick={handlePrevAnnouncement}>&lt;</button>
+            <button onClick={handleNextAnnouncement}>&gt;</button>
           </div>
         </div>
       </div>
 
-      {/* Testimonials Section */}
-      <div className="testimonials">
-        <h1>What Our Students Say</h1>
-        <div className="row">
-          <div className="col-md-4">
-            <div className="testimonial-card">
-              <p>"The courses here are well-structured and helped me land a great job!"</p>
-              <h4>- School A</h4>
+      {/* Image Section */}
+      <div className="image-section">
+        <h2>Explore Our Gallery</h2>
+        <div className="image-grid">
+          {imageSectionData.map((image, index) => (
+            <div key={index} className="image-card">
+              <img src={image.src} alt={image.label} />
+              <div className="image-label">{image.label}</div>
             </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Explore ATC Section */}
+      <div className="explore-atc">
+        <h2>Explore ATC</h2>
+        <div className="explore-cards">
+          <div className="explore-card">
+            <h3>Course Overview</h3>
+            <p>Discover our wide range of courses designed to suit all levels.</p>
+            <a href="#" className="more-info">LEARN MORE</a>
           </div>
-          <div className="col-md-4">
-            <div className="testimonial-card">
-              <p>"Excellent training with hands-on experience. Highly recommended!"</p>
-              <h4>- School B</h4>
-            </div>
+          <div className="explore-card">
+            <h3>Our Campus</h3>
+            <p>Experience our state-of-the-art facilities and resources.</p>
+            <a href="#" className="more-info">TAKE A TOUR</a>
           </div>
-          <div className="col-md-4">
-            <div className="testimonial-card">
-              <p>"Aggarwal Typing College provided me with the skills needed for my career."</p>
-              <h4>- School C</h4>
-            </div>
+          <div className="explore-card">
+            <h3>Faculty & Staff</h3>
+            <p>Meet our experienced and dedicated team of educators.</p>
+            <a href="#" className="more-info">MEET THE TEAM</a>
           </div>
         </div>
       </div>
 
-      {/* Offer of the Day Section */}
-      <div className="offer-of-the-day">
-        <h1>Offer of the Day</h1>
-        <p>Enroll in any course today and get a 20% discount! Limited time offer.</p>
-        <a href="#enroll" className="btn btn-primary">Enroll Now</a>
+      {/* Glory Galore Section */}
+      <div className="glory-galore">
+        <h2>Glory Galore</h2>
+        <div className="glory-content">
+          <div className="glory-card">
+            <h3>Achievements</h3>
+            <p>Our students have excelled in various fields, showcasing their skills and talents.</p>
+          </div>
+          <div className="glory-card">
+            <h3>Awards</h3>
+            <p>Recognizing outstanding performances and contributions in various domains.</p>
+          </div>
+          <div className="glory-card">
+            <h3>Notable Events</h3>
+            <p>Highlights of significant events and milestones in our journey.</p>
+          </div>
+        </div>
       </div>
 
       {/* Footer Section */}
