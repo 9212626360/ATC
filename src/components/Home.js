@@ -116,7 +116,7 @@ const Home = () => {
             <h3>{currentAnnouncement.date}</h3>
             <h4>{currentAnnouncement.title}</h4>
             <p>{currentAnnouncement.content}</p>
-            <a href="#" className="more-info">MORE INFO</a>
+            <a href="/components/About.js" className="more-info">MORE INFO</a>
           </div>
           <div className="arrow-buttons">
             <button onClick={handlePrevAnnouncement}>&lt;</button>
@@ -145,7 +145,7 @@ const Home = () => {
           <div className="explore-card">
             <h3>Course Overview</h3>
             <p>Discover our wide range of courses designed to suit all levels.</p>
-            <a href="#" className="more-info">LEARN MORE</a>
+            <a href="/components/About.js" className="more-info">LEARN MORE</a>
           </div>
           <div className="explore-card">
             <h3>Our Campus</h3>
@@ -155,7 +155,7 @@ const Home = () => {
           <div className="explore-card">
             <h3>Faculty & Staff</h3>
             <p>Meet our experienced and dedicated team of educators.</p>
-            <a href="#" className="more-info">MEET THE TEAM</a>
+            <a href="/components/About.js" className="more-info">MEET THE TEAM</a>
           </div>
         </div>
       </div>
