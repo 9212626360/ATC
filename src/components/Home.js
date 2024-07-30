@@ -150,7 +150,7 @@ const Home = () => {
           <div className="explore-card">
             <h3>Our Campus</h3>
             <p>Experience our state-of-the-art facilities and resources.</p>
-            <a href="#" className="more-info">TAKE A TOUR</a>
+            <a href="/components/About.js" className="more-info">TAKE A TOUR</a>
           </div>
           <div className="explore-card">
             <h3>Faculty & Staff</h3>
