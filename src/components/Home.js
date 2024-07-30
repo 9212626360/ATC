@@ -132,7 +132,7 @@ const Home = () => {
               <h3>{announcement.date}</h3>
               <h4>{announcement.title}</h4>
               <p>{announcement.content}</p>
-              <a href="#" className="more-info">MORE INFO</a>
+              <a href="/About" className="more-info">MORE INFO</a>
             </div>
           ))}
         </div>
