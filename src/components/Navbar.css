@@ -3,33 +3,37 @@
   top: 0;
   width: 100%;
   z-index: 10;
-  background: transparent; /* Initially transparent */
-  transition: background-color 0.1s ease, box-shadow 0.1s ease;
+  background-color: #892d2d60; /* White background */
+  transition: background-color 0.8s ease, box-shadow 0.8s ease;
 }
+
 
 .navbar-scrolled {
-  background: #032d64; /* Black background when scrolled or not on the home page */
+  background-color: #032d64; 
+  color:#ffd700
 }
 
-.navbar-brand {
-  color: white;
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
   transition: color 0.3s;
-
 }
 
 .navbar-nav .nav-item .nav-link {
-  color: white;
+  font-size: 18px;
+  color: #fffbfb;
   transition: color 0.3s;
 }
 
-.navbar-nav .nav-item .nav-link:hover {
-  color: #ffd700; /* Gold color on hover */
-}
+/* .navbar-nav .nav-item .nav-link:hover {
+  color: #ffd700; 
+}  */
 
 .navbar-toggler {
-  border-color: white;
+  border-color: #333;
 }
 
 .navbar-toggler-icon {
-  background-color: white;
+  background-color: #333;
 }

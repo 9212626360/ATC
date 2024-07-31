@@ -4,28 +4,21 @@ import Carousel from 'react-bootstrap/Carousel';
 
 const announcements = [
   {
-    date: '22 Apr',
+    date: '22 Apr 2024',
     title: 'Congratulations to Ashish Bhardwaj',
     content: 'A Beacon of Excellence for Gurukul The School Alumni!',
   },
   {
-    date: '14 Apr',
+    date: '14 Apr 2024',
     title: 'Gurukul The School proudly celebrates',
     content: 'its 23rd Foundation Day!',
   },
   {
-    date: '28 Mar',
+    date: '28 Mar 2024',
     title: 'Celebrating Ms. Chitra Sharma',
     content: "Remarkable Achievement in International Teachers' Olympiad",
   },
   // Add more announcements as needed
-];
-
-const imageSectionData = [
-  { src: '/Assets/ATC LOGO.jpeg', label: 'Demo 1' },
-  { src: '/Assets/ATC LOGO.jpeg', label: 'Demo 2' },
-  { src: '/Assets/ATC LOGO.jpeg', label: 'Demo 3' },
-  // Add more images as needed
 ];
 
 const Home = () => {
@@ -72,7 +65,6 @@ const Home = () => {
     };
   }, []);
 
-
   return (
     <div className="home">
       {/* Carousel Section */}
@@ -80,7 +72,7 @@ const Home = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="/Assets/GROUP.jpeg"
+            src="/Assets/1722404645637.jpg"
             alt="First slide"
           />
           <Carousel.Caption>
@@ -91,110 +83,91 @@ const Home = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="/Assets/GROUP2.jpeg"
+            src="/Assets/1722404727645.jpg"
             alt="Second slide"
           />
-          <Carousel.Caption>
+          {/* <Carousel.Caption>
             <h3>Our Specialized Courses</h3>
             <p>Offering a range of typing and computer courses to meet your needs.</p>
-          </Carousel.Caption>
+          </Carousel.Caption> */}
         </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="/Assets/GROUP3.jpeg"
-            alt="Third slide"
-          />
-          <Carousel.Caption>
-            <h3>Join Us Today!</h3>
-            <p>Enroll now to take advantage of our special offers!</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="/Assets/GROUP4.jpeg"
-            alt="Third slide"
-          />
-          <Carousel.Caption>
-            <h3>Join Us Today!</h3>
-            <p>Enroll now to take advantage of our special offers!</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="/Assets/5.jpeg"
-            alt="Third slide"
-          />
-          <Carousel.Caption>
-            <h3>Join Us Today!</h3>
-            <p>Enroll now to take advantage of our special offers!</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-     
       </Carousel>
 
       {/* Welcome Section */}
-      <div className={`welcome-section ${showWelcomeSection ? 'show' : ''}`}>
-        <h2 style={{ color: '#032d64' }}>WELCOME TO ATC</h2>
+      <div
+        className={`welcome-section ${showWelcomeSection ? 'show' : ''}`}
+      >
+        <h1 style={{ color: '#032d64' }}>WELCOME TO ATC</h1>
         <blockquote>
-          "The child must know that he is a miracle, that since the beginning of the world
-          there hasn't been, and until the end of the world there will not be,
-          another child like him."
+          "The child must know that he is a miracle, that since the beginning of
+          the world there hasn't been, and until the end of the world there will
+          not be, another child like him."
         </blockquote>
         <footer>- PABLO CASALS</footer>
       </div>
 
       {/* News & Announcements Section */}
-      <div className={`news-announcements ${showAnnouncements ? 'show' : ''}`}>
-      <h2 style={{ textAlign: 'center' }}>NEWS & ANNOUNCEMENTS</h2>
-      <div className="announcement-carousel">
+      <div
+        className={`news-announcements ${showAnnouncements ? 'show' : ''}`}
+      >
+        <h2 style={{ textAlign: 'center' }}>NEWS & ANNOUNCEMENTS</h2>
+        <div className="announcement-carousel">
           {announcements.map((announcement, index) => (
             <div key={index} className="announcement-card">
               <h3>{announcement.date}</h3>
               <h4>{announcement.title}</h4>
               <p>{announcement.content}</p>
-              <a href="/About" className="more-info">MORE INFO</a>
+              <a href="/About" className="more-info">
+                MORE INFO
+              </a>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Image Section */}
-      <div className="image-section">
-        <h2 >Explore Our Gallery</h2>
-        <div className="image-grid">
-          {imageSectionData.map((image, index) => (
-            <div key={index} className="image-card">
-              <img src={image.src} alt={image.label} />
-              <div className="image-label">{image.label}</div>
-            </div>
-          ))}
+      <div className="statistics">
+        <h2 style={{ textAlign: 'center' }}>Statistics</h2>
+        <div className="stats-cards">
+          <div className="stats-card">
+            <h3>100+</h3>
+            <p>Students Enrolled</p>
+          </div>
+          <div className="stats-card">
+            <h3>20+</h3>
+            <p>Courses Offered</p>
+          </div>
+          <div className="stats-card">
+            <h3>95%</h3>
+            <p>Student Success Rate</p>
+          </div>
+          <div className="stats-card">
+            <h3>10+</h3>
+            <p>Years of Experience</p>
+          </div>
         </div>
       </div>
 
       {/* Explore ATC Section */}
       <div className="explore-atc">
-        <h2 style={{ textAlign: 'center' }}>Explore ATC</h2>
-        <div className="explore-cards">
-          <div className="explore-card">
-            <h3>Course Overview</h3>
-            <p>Discover our wide range of courses designed to suit all levels.</p>
-            <a href="/About" className="more-info">LEARN MORE</a>
-          </div>
-          <div className="explore-card">
-            <h3>Our Campus</h3>
-            <p>Experience our state-of-the-art facilities and resources.</p>
-            <a href="/About" className="more-info">TAKE A TOUR</a>
-          </div>
-          <div className="explore-card">
-            <h3>Faculty & Staff</h3>
-            <p>Meet our experienced and dedicated team of educators.</p>
-            <a href="/About" className="more-info">MEET THE TEAM</a>
-          </div>
-        </div>
-      </div>
+  <h2>Explore ATC</h2>
+  <div className="explore-grid">
+    <div className="explore-card">
+      <h3>Course Overview</h3>
+      <p>Discover our wide range of courses designed to suit all levels.</p>
+      <a href="/About" className="more-info">LEARN MORE</a>
+    </div>
+    <div className="explore-card">
+      <h3>Our Campus</h3>
+      <p>Experience our state-of-the-art facilities and resources.</p>
+      <a href="/About" className="more-info">TAKE A TOUR</a>
+    </div>
+    <div className="explore-card">
+      <h3>Faculty & Staff</h3>
+      <p>Meet our experienced and dedicated team of educators.</p>
+      <a href="/About" className="more-info">MEET THE TEAM</a>
+    </div>
+  </div>
+</div>
 
       {/* Glory Galore Section */}
       <div className="glory-galore">
@@ -229,11 +202,21 @@ const Home = () => {
             <div className="col-md-4">
               <h4>Quick Links</h4>
               <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About Us</a></li>
-                <li><a href="/courses">Courses</a></li>
-                <li><a href="/enquiry">Enquiry</a></li>
-                <li><a href="/contact">Contact</a></li>
+                <li>
+                  <a href="/">Home</a>
+                </li>
+                <li>
+                  <a href="/about">About Us</a>
+                </li>
+                <li>
+                  <a href="/courses">Courses</a>
+                </li>
+                <li>
+                  <a href="/enquiry">Enquiry</a>
+                </li>
+                <li>
+                  <a href="/contact">Contact</a>
+                </li>
               </ul>
             </div>
             <div className="col-md-4">

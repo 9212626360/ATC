@@ -4,7 +4,7 @@ import './Navbar.css';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
-  const location = useLocation(); // Hook to get the current route
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,20 +14,20 @@ const Navbar = () => {
         setScrolled(false);
       }
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
-  // Determine if the navbar should be transparent
   const isHomePage = location.pathname === '/';
 
   return (
     <nav className={`navbar navbar-expand-lg ${scrolled || !isHomePage ? 'navbar-scrolled' : ''}`}>
       <div className="container-fluid">
-        <Link className="navbar-brand" to="/">Aggarwal Typing College</Link>
+        <Link className="navbar-brand" to="/">
+          <img style={{ height: '40px', width:'90px' }} src="/Assets/UpatedLogo.png" alt="Logo" className="navbar-logo" />
+        </Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
