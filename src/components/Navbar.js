@@ -30,7 +30,7 @@ const Navbar = () => {
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
           <img
-            style={{ height: '50px', width: '55px' }}
+            style={{ height: '65px', width: '75px' }}
             src="/Assets/UpatedLogo.png"
             alt="Logo"
             className={`navbar-logo ${scrolled || !isHomePage ? 'navbar-logoscrolled' : ''}`}
