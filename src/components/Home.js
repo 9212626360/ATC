@@ -4,9 +4,9 @@ import Carousel from 'react-bootstrap/Carousel';
 import CircularProgress from '@mui/material/CircularProgress';
 import { Fade, Slide } from 'react-awesome-reveal';
 
-const announcements = [
-  // Your announcements data
-];
+// const announcements = [
+//   // Your announcements data
+// ];
 
 const testimonials = [
   {
@@ -24,29 +24,29 @@ const testimonials = [
 ];
 
 const Home = () => {
-  const [showAnnouncements, setShowAnnouncements] = useState(false);
+  // const [showAnnouncements, setShowAnnouncements] = useState(false);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setShowAnnouncements(true);
-          } else {
-            setShowAnnouncements(false);
-          }
-        });
-      },
-      {
-        threshold: 0.1,
-      }
-    );
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(
+  //     (entries) => {
+  //       entries.forEach((entry) => {
+  //         if (entry.isIntersecting) {
+  //           setShowAnnouncements(true);
+  //         } else {
+  //           setShowAnnouncements(false);
+  //         }
+  //       });
+  //     },
+  //     {
+  //       threshold: 0.1,
+  //     }
+  //   );
 
-    const announcementSection = document.querySelector('.news-announcements');
-    if (announcementSection) {
-      observer.observe(announcementSection);
-    }
-  }, []);
+  //   const announcementSection = document.querySelector('.news-announcements');
+  //   if (announcementSection) {
+  //     observer.observe(announcementSection);
+  //   }
+  // }, []);
 
   return (
     <div className="home">
