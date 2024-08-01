@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './Home.css';
 import Carousel from 'react-bootstrap/Carousel';
 import CircularProgress from '@mui/material/CircularProgress';
@@ -87,7 +87,7 @@ const Home = () => {
 
       {/* Explore ATC Section */}
       <div className="explore-atc">
-        <h2>Explore ATC</h2>
+        <h2>Courses ATC</h2>
         <div className="explore-grid">
           <div className="explore-card">
             <h3>Basic Computer</h3>
