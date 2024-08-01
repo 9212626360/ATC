@@ -55,7 +55,8 @@ const Home = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="/Assets/1722404645637.jpg"
+            // src="/Assets/1722404645637.jpg"
+            src="/Assets/Slider2.png"
             alt="First slide"
           />
           <Carousel.Caption>
@@ -66,7 +67,8 @@ const Home = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="/Assets/1722404727645.jpg"
+            src="/Assets/Slider.png"
+            // src="/Assets/1722404727645.jpg"
             alt="Second slide"
           />
         </Carousel.Item>
@@ -185,7 +187,7 @@ const Home = () => {
             <h4>Contact Us</h4>
             <p>Aggarwal Typing College</p>
             <p>Palam Colony (Kailash Puri), Near JBM Public School</p>
-            <p>Phone: 807630009</p>
+            <p>Phone: 8076307009</p>
             <p>Email: info@aggarwaltypingcollege.com</p>
           </div>
           <div className="footer-column">
