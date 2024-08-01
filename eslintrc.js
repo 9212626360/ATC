@@ -11,7 +11,7 @@ module.exports = {
       env: {
         "browser": true,
         "node": true,
-        ci: process.env.CI === 'true' ? false : true,
+        ci: process.env.CI === 'false',
       },
     },
   ],
