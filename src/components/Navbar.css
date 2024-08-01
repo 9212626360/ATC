@@ -1,34 +1,72 @@
+/* Navbar.css */
+
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 10;
-  background-color: #892d2d60; /* White background */
   transition: background-color 0.8s ease, box-shadow 0.8s ease;
+  padding: 5px 20px; /* Reduced padding for left and right */
 }
 
+.navbar-transparent {
+  background-color: transparent; /* Transparent background initially */
+}
 
 .navbar-scrolled {
-  background-color: #032d64; 
-  color:#ffd700
+  background-color: #032d64; /* Background color on scroll */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #333;
-  transition: color 0.3s;
+.navbar-logoscrolled{
+  background-color :white; /* Background color on scroll */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+
+}
+
+.navbar-logo {
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.05);
+}
+
+.navbar-nav .nav-item {
+  padding: 0 10px; /* Adjusted padding for each nav item */
 }
 
 .navbar-nav .nav-item .nav-link {
-  font-size: 18px;
-  color: #fffbfb;
-  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  font-size: 16px; /* Reduced font size */
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+  text-transform: uppercase;
+  position: relative;
+  padding: 5px 0;
+  transition: color 0.3s, padding 0.3s ease;
 }
 
-/* .navbar-nav .nav-item .nav-link:hover {
-  color: #ffd700; 
-}  */
+.navbar-nav .nav-item .nav-link .nav-icon {
+  margin-right: 8px;
+  font-size: 18px; /* Smaller icon size */
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  padding-bottom: 10px; /* Additional padding for hover effect */
+}
+
+.navbar-nav .nav-item .nav-link:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px; /* Underline thickness */
+  width: 100%;
+  background-color: #ff0000; /* Red underline color */
+  transition: width 0.3s;
+}
 
 .navbar-toggler {
   border-color: #333;
@@ -36,4 +74,18 @@
 
 .navbar-toggler-icon {
   background-color: #333;
+}
+
+.enquiry-link {
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff !important; /* White text color */
+  margin: 0 10px; /* Spacing around Enquiry link */
+}
+
+
+.container-fluid {
+  display: flex;
+  justify-content: space-between; /* Space between logo and nav items */
+  align-items: center; /* Center items vertically */
 }
