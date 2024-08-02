@@ -180,9 +180,9 @@ const Home = () => {
     <div className="footer-column social-column">
       <h4>Follow Us</h4>
       <ul className="social-media">
-        <li><a href="#"><i className="fab fa-facebook-f"></i></a></li>
-        <li><a href="#"><i className="fab fa-twitter"></i></a></li>
-        <li><a href="#"><i className="fab fa-instagram"></i></a></li>
+        <li><a href="/about"><i className="fab fa-facebook-f"></i></a></li>
+        <li><a href="/about"><i className="fab fa-twitter"></i></a></li>
+        <li><a href="/about"><i className="fab fa-instagram"></i></a></li>
       </ul>
     </div>
   </div>
