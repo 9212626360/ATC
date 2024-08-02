@@ -1,23 +1,62 @@
 /* src/components/About.css */
 .about {
-  padding: 40px 0;
+  padding: 60px 0;
+  background-color: #f9f9f9;
 }
 
 .about h1 {
   text-align: center;
-  margin-bottom: 30px;
-  padding-top: 20px; /* Adjust the padding as needed */
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  font-weight: bold;
+  color: #333;
 }
 
-.about .row {
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
   align-items: center;
 }
 
-.about p {
+.about-text {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-text p {
+  font-size: 1.1em;
+  color: #555;
+  line-height: 1.6;
   margin-bottom: 20px;
 }
 
-.about img {
-  border-radius: 5px;
-  max-width: 100%; /* Ensure images are responsive */
+.about-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image img {
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+
+  .about-text, .about-image {
+    padding: 10px;
+  }
 }

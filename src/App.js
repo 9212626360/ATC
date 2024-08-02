@@ -5,6 +5,7 @@ import Home from './components/Home';
 import About from './components/About';
 import Courses from './components/Courses';
 import Enquiry from './components/Enquiry';
+import AdmissionForm from './components/AdmissionForm';
 import Contact from './components/Contact';
 import Navbar from './components/Navbar';
 
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/enquiry" element={<Enquiry />} />
+        <Route path="/AdmissionForm" element={<AdmissionForm />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>

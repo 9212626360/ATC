@@ -2,32 +2,50 @@
 import React from 'react';
 import './Courses.css';
 
+const courses = [
+  {
+    imgSrc: '/Assets/basic-computer-skills-for-students.jpg',
+    alt: 'Basic Computer Skills',
+    title: 'Basic Computer Skills',
+    description: 'Learn the basics of computer operations and software applications, from word processing to internet navigation.',
+  },
+  {
+    imgSrc: '/Assets/typing-basics-regular-typing-lesson.png',
+    alt: 'English Typing',
+    title: 'English Typing',
+    description: 'Improve your typing speed and accuracy in English with our comprehensive typing courses.',
+  },
+  {
+    imgSrc: '/Assets/hindi-typing-finger-position.jpg',
+    alt: 'Hindi Typing',
+    title: 'Hindi Typing',
+    description: 'Enhance your typing skills in the Hindi language, with courses designed for beginners and advanced learners alike.',
+  },
+  {
+    imgSrc: '/Assets/short hand 23123.jpg',
+    alt: 'Shorthand Stenography',
+    title: 'Shorthand Stenography',
+    description: 'Master the art of shorthand stenography, an essential skill for secretaries, journalists, and other professionals.',
+  },
+];
+
 const Courses = () => {
   return (
     <div className="courses">
       <div className="container">
-        <h1>Our Courses</h1>
-        <div className="row">
-          <div className="col-md-4">
-            <img src="/Assets//basic-computer-skills-for-students.jpg" alt="Basic Computer Skills" className="img-fluid" />
-            <h3>Basic Computer Skills</h3>
-            <p>Learn the basics of computer operations and software applications, from word processing to internet navigation.</p>
-          </div>
-          <div className="col-md-4">
-            <img src="/Assets/typing-basics-regular-typing-lesson.png" alt="English Typing" className="img-fluid" />
-            <h3>English Typing</h3>
-            <p>Improve your typing speed and accuracy in English with our comprehensive typing courses.</p>
-          </div>
-          <div className="col-md-4">
-            <img src="/Assets/hindi-typing-finger-position.jpg" alt="Hindi Typing" className="img-fluid" />
-            <h3>Hindi Typing</h3>
-            <p>Enhance your typing skills in the Hindi language, with courses designed for beginners and advanced learners alike.</p>
-          </div>
-          <div className="col-md-4">
-            <img src="/Assets/short hand 23123.jpg" alt="Shorthand Stenography" className="img-fluid" />
-            <h3>Shorthand Stenography</h3>
-            <p>Master the art of shorthand stenography, an essential skill for secretaries, journalists, and other professionals.</p>
-          </div>
+        <h1 className="text-center mb-5"> <br></br>Our Courses</h1>
+        <div className="courses-wrapper">
+          {courses.map((course, index) => (
+            <div className="course-card" key={index}>
+              <div className="course-image-wrapper">
+                <img src={course.imgSrc} alt={course.alt} className="course-image" />
+              </div>
+              <div className="course-content">
+                <h3>{course.title}</h3>
+                <p>{course.description}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

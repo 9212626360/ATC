@@ -1,19 +1,19 @@
 /* src/components/Enquiry.css */
 .enquiry {
-  padding: 40px 0;
-}
-
-.enquiry h1 {
-  text-align: center;
-  margin-bottom: 30px;
-  padding-top: 20px;
-}
-
-.enquiry .form-group {
-  margin-bottom: 20px;
-}
-
-.enquiry .btn-primary {
-  display: block;
-  width: 100%;
-}
+    padding: 40px 0;
+  }
+  
+  .enquiry h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-top: 20px;
+  }
+  
+  .enquiry .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .enquiry .btn-primary {
+    display: block;
+    width: 100%;
+  }

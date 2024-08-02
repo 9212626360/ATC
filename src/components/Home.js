@@ -4,10 +4,6 @@ import Carousel from 'react-bootstrap/Carousel';
 import CircularProgress from '@mui/material/CircularProgress';
 import { Fade, Slide } from 'react-awesome-reveal';
 
-// const announcements = [
-//   // Your announcements data
-// ];
-
 const testimonials = [
   {
     name: 'John Doe',
@@ -24,30 +20,6 @@ const testimonials = [
 ];
 
 const Home = () => {
-  // const [showAnnouncements, setShowAnnouncements] = useState(false);
-
-  // useEffect(() => {
-  //   const observer = new IntersectionObserver(
-  //     (entries) => {
-  //       entries.forEach((entry) => {
-  //         if (entry.isIntersecting) {
-  //           setShowAnnouncements(true);
-  //         } else {
-  //           setShowAnnouncements(false);
-  //         }
-  //       });
-  //     },
-  //     {
-  //       threshold: 0.1,
-  //     }
-  //   );
-
-  //   const announcementSection = document.querySelector('.news-announcements');
-  //   if (announcementSection) {
-  //     observer.observe(announcementSection);
-  //   }
-  // }, []);
-
   return (
     <div className="home">
       {/* Carousel Section */}
@@ -55,7 +27,6 @@ const Home = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            // src="/Assets/1722404645637.jpg"
             src="/Assets/Slider2.png"
             alt="First slide"
           />
@@ -68,7 +39,6 @@ const Home = () => {
           <img
             className="d-block w-100"
             src="/Assets/1722404645637.jpg"
-            // src="/Assets/1722404727645.jpg"
             alt="Second slide"
           />
         </Carousel.Item>
@@ -181,46 +151,47 @@ const Home = () => {
       </div>
 
       {/* Footer Section */}
+     
       <footer className="footer">
-        <div className="container">
-          <div className="footer-column">
-            <h4>Contact Us</h4>
-            <p>Aggarwal Typing College</p>
-            <p>Palam Colony (Kailash Puri), Near JBM Public School</p>
-            <p>Phone: 8076307009</p>
-            <p>Email: info@aggarwaltypingcollege.com</p>
-          </div>
-          <div className="footer-column">
-            <h4>Quick Links</h4>
-            <ul>
-              <li>
-                <a href="/">Home</a>
-              </li>
-              <li>
-                <a href="/about">About Us</a>
-              </li>
-              <li>
-                <a href="/courses">Courses</a>
-              </li>
-              <li>
-                <a href="/enquiry">Enquiry</a>
-              </li>
-              <li>
-                <a href="/contact">Contact</a>
-              </li>
-            </ul>
-          </div>
-          <div className="footer-column">
-            <h4>Follow Us</h4>
-            <ul className="social-media">
-              {/* Add social media links here */}
-            </ul>
-          </div>
-        </div>
-        <div className="text-center">
-          <p>&copy; 2024 Sarawaswati Designs. All rights reserved.</p>
-        </div>
-      </footer>
+  <div className="container">
+    <div className="footer-column logo-column">
+      <img src="/Assets/ULogo.jpeg" alt="Aggarwal Typing College" className="footer-logo" />
+    </div>
+    <div className="footer-column contact-column">
+      <h4>Contact Us</h4>
+      <address>
+        Aggarwal Typing College<br />
+        Palam Colony (Kailash Puri), Near JBM Public School<br />
+        Phone: <a href="tel:+918076307009">8076307009</a><br />
+        Email: <a href="mailto:info@aggarwaltypingcollege.com">info@aggarwaltypingcollege.com</a>
+      </address>
+    </div>
+    <div className="footer-column links-column">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/courses">Courses</a></li>
+        <li><a href="/enquiry">Enquiry</a></li>
+        <li><a href="/admissionform">Admission Form</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+    <div className="footer-column social-column">
+      <h4>Follow Us</h4>
+      <ul className="social-media">
+        <li><a href="#"><i className="fab fa-facebook-f"></i></a></li>
+        <li><a href="#"><i className="fab fa-twitter"></i></a></li>
+        <li><a href="#"><i className="fab fa-instagram"></i></a></li>
+      </ul>
+    </div>
+  </div>
+  <div className="footer-bottom text-center">
+    <p>&copy; 2024 Sarawaswati Designs. All rights reserved.</p>
+  </div>
+</footer>
+
+
     </div>
   );
 };

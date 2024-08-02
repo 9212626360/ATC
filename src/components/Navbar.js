@@ -74,7 +74,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/admissions">
+              <Link className="nav-link" to="/AdmissionForm">
                 <FaGraduationCap className="nav-icon" />
                 <span>Admissions</span>
               </Link>

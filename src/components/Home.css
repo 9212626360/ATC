@@ -226,64 +226,108 @@
 
 /* Footer Section */
 .footer {
-  background-color: #343a40;
-  color: #fff;
-  padding: 2em 0;
+  background-color: #1a1a1a; /* Darker background for contrast */
+  color: #f0f0f0; /* Light font color for readability */
+  padding: 3em 0; /* More padding for a spacious look */
+  font-family: 'Open Sans', sans-serif; /* Clean and modern font */
   text-align: center;
 }
 
 .footer .container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-around; /* Better alignment for columns */
+  align-items: flex-start;
+  max-width: 1200px; /* Max width for responsive design */
+  margin: 0 auto; /* Center align container */
 }
 
 .footer-column {
-  flex: 1 1 200px;
-  max-width: 300px;
-  margin: 1em;
+  flex: 1;
+  max-width: 280px; /* Increased max width for better alignment */
+  margin: 1em 0; /* Space between columns */
+  text-align: left;
 }
 
-.footer-column h4 {
-  font-size: 1.5em;
-  margin-bottom: 0.5em;
+.logo-column {
+  text-align: center; /* Center align logo */
 }
 
-.footer-column ul {
-  list-style: none;
-  padding: 0;
+.footer-logo {
+  width: 120px; /* Adjusted width for logo */
+  height: auto;
+  margin-bottom: 1em; /* Space between logo and text */
 }
 
-.footer-column ul li {
-  margin-bottom: 0.5em;
+.contact-column h4,
+.links-column h4,
+.social-column h4 {
+  font-size: 1.75em; /* Larger heading font */
+  margin-bottom: 0.75em;
+  color: #ff6b6b; /* Accent color for headings */
 }
 
-.footer-column ul li a {
+.contact-column address {
+  font-style: normal;
+  line-height: 1.8; /* Better line spacing for readability */
+}
+
+.contact-column a {
+  color: #ff6b6b; /* Accent color for links */
   text-decoration: none;
-  color: #007bff;
 }
 
-.footer-column ul li a:hover {
+.contact-column a:hover {
   text-decoration: underline;
 }
 
-.footer .social-media {
+.links-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.links-column ul li {
+  margin-bottom: 0.5em;
+}
+
+.links-column ul li a {
+  text-decoration: none;
+  color: #f0f0f0;
+  font-weight: 600; /* Bold font for links */
+  transition: color 0.3s; /* Smooth transition for hover */
+}
+
+.links-column ul li a:hover {
+  color: #ff6b6b; /* Hover color */
+}
+
+.social-column {
+  text-align: center;
+}
+
+.social-media {
   display: flex;
   justify-content: center;
   gap: 1em;
 }
 
-.footer .social-media li {
+.social-media li {
   list-style: none;
 }
 
-.footer .social-media li a {
-  color: #fff;
-  font-size: 1.5em;
+.social-media li a {
+  color: #f0f0f0;
+  font-size: 1.8em; /* Larger icons */
+  transition: color 0.3s;
 }
 
-.footer .text-center {
-  margin-top: 2em;
-  font-size: 0.9em;
-  color: #777;
+.social-media li a:hover {
+  color: #ff6b6b; /* Hover color for social icons */
+}
+
+.footer-bottom {
+  margin-top: 3em;
+  font-size: 0.85em;
+  color: #999; /* Subtle color for footer bottom text */
 }

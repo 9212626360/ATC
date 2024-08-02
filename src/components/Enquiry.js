@@ -1,4 +1,3 @@
-// src/components/Enquiry.js
 import React, { useState } from 'react';
 import './Enquiry.css';
 
