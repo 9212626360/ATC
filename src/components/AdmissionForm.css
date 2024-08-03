@@ -1,73 +1,43 @@
-.admission-form {
-  background-color: #ffffff;
-  padding: 40px 20px;
+.container {
   max-width: 800px;
-  margin: auto;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  font-family: Arial, sans-serif;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.admission-form h1 {
+.text-center {
   text-align: center;
-  color: #343a40;
-  margin-bottom: 30px;
+}
+
+.text-white {
+  color: white;
+}
+
+.bg-blue {
+  background-color: blue;
+  padding: 10px 0;
 }
 
 .form-group {
-  display: flex;
-  flex-direction: column;
   margin-bottom: 15px;
 }
 
-.form-group label {
-  margin-bottom: 5px;
-  color: #343a40;
-}
-
-.form-group input {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.row {
-  display: flex;
-  justify-content: space-between;
-}
-
-.row .form-group {
-  flex: 1;
-  margin-right: 20px;
-}
-
-.row .form-group:last-child {
-  margin-right: 0;
-}
-
-.declaration {
-  margin-top: 30px;
-  color: #343a40;
-}
-
-.declaration p {
-  margin-bottom: 15px;
-  font-weight: bold;
-}
-
-.submit-btn {
-  display: block;
+.form-control {
   width: 100%;
-  padding: 15px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 18px;
-  margin-top: 20px;
+  padding: 8px;
+  box-sizing: border-box;
 }
 
-.submit-btn:hover {
-  background-color: #0056b3;
+.table {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.table th, .table td {
+  text-align: center;
+}
+
+.btn {
+  height: 40px;
+  width: 150px;
+  font-size: 16px;
 }
