@@ -1,6 +1,6 @@
 /* General styles */
 .home {
-  font-family: Arial, sans-serif;
+  font-family: calibri;
   overflow: hidden;
   line-height: 1.6;
 }
@@ -331,3 +331,5 @@
   font-size: 0.85em;
   color: #999; /* Subtle color for footer bottom text */
 }
+
+
