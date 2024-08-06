@@ -1,7 +1,7 @@
 import React from 'react';
 import './Home.css';
 import Carousel from 'react-bootstrap/Carousel';
-import CircularProgress from '@mui/material/CircularProgress';
+// import CircularProgress from '@mui/material/CircularProgress';
 import { Fade, Slide } from 'react-awesome-reveal';
 
 const testimonials = [
@@ -108,26 +108,42 @@ const Home = () => {
       <div className="statistics">
         <h2>Statistics</h2>
         <div className="stats-cards">
-          <div className="stats-card">
-            <CircularProgress variant="determinate" value={100} size={120} thickness={2} />
-            <h3>100+</h3>
-            <p>Students Enrolled</p>
-          </div>
-          <div className="stats-card">
-            <CircularProgress variant="determinate" value={20} size={120} thickness={2} />
-            <h3>20+</h3>
-            <p>Courses Offered</p>
-          </div>
-          <div className="stats-card">
-            <CircularProgress variant="determinate" value={95} size={120} thickness={2} />
-            <h3>95%</h3>
-            <p>Student Success Rate</p>
-          </div>
-          <div className="stats-card">
-            <CircularProgress variant="determinate" value={10} size={120} thickness={2} />
-            <h3>10+</h3>
-            <p>Years of Experience</p>
-          </div>
+          <Slide triggerOnce direction="up">
+            <div className="stats-card">
+              <div className="icon">
+                <i className="fas fa-user-graduate"></i>
+              </div>
+              <h3>100+</h3>
+              <p>Students Enrolled</p>
+            </div>
+          </Slide>
+          <Slide triggerOnce direction="up" delay={100}>
+            <div className="stats-card">
+              <div className="icon">
+                <i className="fas fa-book"></i>
+              </div>
+              <h3>20+</h3>
+              <p>Courses Offered</p>
+            </div>
+          </Slide>
+          <Slide triggerOnce direction="up" delay={200}>
+            <div className="stats-card">
+              <div className="icon">
+                <i className="fas fa-trophy"></i>
+              </div>
+              <h3>95%</h3>
+              <p>Student Success Rate</p>
+            </div>
+          </Slide>
+          <Slide triggerOnce direction="up" delay={300}>
+            <div className="stats-card">
+              <div className="icon">
+                <i className="fas fa-clock"></i>
+              </div>
+              <h3>10+</h3>
+              <p>Years of Experience</p>
+            </div>
+          </Slide>
         </div>
       </div>
 

@@ -149,13 +149,16 @@
 /* Statistics Section */
 .statistics {
   text-align: center;
-  padding: 2em;
-  background-color: #fff;
+  padding: 4em 2em;
+  background: linear-gradient(to bottom right, #007bff, #00c6ff);
+  color: #fff;
 }
 
 .statistics h2 {
   font-size: 2.5em;
   margin-bottom: 1em;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .stats-cards {
@@ -166,19 +169,38 @@
 
 .stats-card {
   margin: 1em;
+  padding: 2em;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 55px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   text-align: center;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.stats-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.stats-card .icon {
+  font-size: 4em;
+  color: #fff;
+  margin-bottom: 0.5em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .stats-card h3 {
-  font-size: 2em;
+  font-size: 2.5em;
   margin-top: 0.5em;
+  color: #ffeb3b;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .stats-card p {
   font-size: 1.2em;
   margin-top: 0.3em;
+  color: #fff;
 }
-
 /* Join Us Section */
 .join-us {
   padding: 2em;
