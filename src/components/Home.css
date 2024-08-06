@@ -150,12 +150,12 @@
 .statistics {
   text-align: center;
   padding: 4em 2em;
-  background: linear-gradient(to bottom right, #007bff, #00c6ff);
+  background: linear-gradient(to bottom right, #333, #00c6ff);
   color: #fff;
 }
 
 .statistics h2 {
-  font-size: 2.5em;
+  font-size: 5.5em;
   margin-bottom: 1em;
   color: #fff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
@@ -352,6 +352,25 @@
   margin-top: 3em;
   font-size: 0.85em;
   color: #999; /* Subtle color for footer bottom text */
+}
+
+.strokeStatictics{
+    -webkit-text-stroke-width: 1.5px;
+    color: transparent;
+    text-transform: uppercase;
+    font-weight: 700;
+    -webkit-text-stroke-color: white;
+    font-size: inherit; 
+}
+
+
+.stroke{
+  -webkit-text-stroke-width: 1.5px;
+  color: transparent;
+  text-transform: uppercase;
+  font-weight: 700;
+  -webkit-text-stroke-color: #1b439b;
+  font-size: inherit; 
 }
 
 

@@ -1,21 +1,24 @@
-import React from 'react';
-import './Home.css';
-import Carousel from 'react-bootstrap/Carousel';
+import React from "react";
+import "./Home.css";
+import Carousel from "react-bootstrap/Carousel";
 // import CircularProgress from '@mui/material/CircularProgress';
-import { Fade, Slide } from 'react-awesome-reveal';
+import { Fade, Slide } from "react-awesome-reveal";
 
 const testimonials = [
   {
-    name: 'John Doe',
-    feedback: 'The courses here are amazing! I learned so much and the teachers are very supportive.',
+    name: "John Doe",
+    feedback:
+      "The courses here are amazing! I learned so much and the teachers are very supportive.",
   },
   {
-    name: 'Jane Smith',
-    feedback: 'ATC has been a fantastic place to learn typing and computer skills. Highly recommended!',
+    name: "Jane Smith",
+    feedback:
+      "ATC has been a fantastic place to learn typing and computer skills. Highly recommended!",
   },
   {
-    name: 'Rahul Sharma',
-    feedback: 'The environment and teaching methods at ATC are top-notch. Great place to enhance your skills.',
+    name: "Rahul Sharma",
+    feedback:
+      "The environment and teaching methods at ATC are top-notch. Great place to enhance your skills.",
   },
 ];
 
@@ -47,51 +50,82 @@ const Home = () => {
       {/* Welcome Section */}
       <div className="welcome-section">
         <Slide triggerOnce direction="left">
-          <h2><span className="highlight">Unlock Your Potential</span> with Our Comprehensive IT and Typing Courses</h2>
+          <h2>
+            <span className="highlight" style={{ color: "#1b439b" }}>
+              "Your Journey to Digital Excellence."
+            </span>
+          </h2>
         </Slide>
         <Fade triggerOnce>
-          <blockquote>
-            "At ATC, we are committed to empowering individuals with essential computer skills and typing proficiency, setting the foundation for a successful career in today's digital age. Our courses are designed for everyone, whether you're a beginner looking to understand the basics or someone seeking to enhance your existing skills."
+          <blockquote style={{ fontSize: "20px" }}>
+            "Education is about more than just knowledge; it's about building
+            character and self-confidence. True education empowers individuals
+            to realize their potential and contribute positively to society."
           </blockquote>
-          <footer>- PABLO CASALS</footer>
+          <footer style={{ fontSize: "22px" }}>- Swami Vivekananda</footer>
         </Fade>
       </div>
 
       {/* Explore ATC Section */}
       <div className="explore-atc">
-        <h2>Courses ATC</h2>
+        <p style={{ fontSize: "50px" }}>
+          <span
+            style={{ marginRight: "5px", color: "#1b439b", fontWeight: 400 }}
+          >
+            Courses
+          </span>
+          <span className="stroke">ATC</span>
+        </p>
+
         <div className="explore-grid">
           <div className="explore-card">
             <h3>Basic Computer</h3>
             <p>Learn the basics of computers and essential software.</p>
-            <a href="/courses" className="more-info">LEARN MORE</a>
+            <a href="/courses" className="more-info">
+              LEARN MORE
+            </a>
           </div>
           <div className="explore-card">
             <h3>English Typing</h3>
             <p>Master English typing skills with our expert guidance.</p>
-            <a href="/courses" className="more-info">LEARN MORE</a>
+            <a href="/courses" className="more-info">
+              LEARN MORE
+            </a>
           </div>
           <div className="explore-card">
             <h3>Hindi Typing</h3>
             <p>Enhance your Hindi typing proficiency.</p>
-            <a href="/courses" className="more-info">LEARN MORE</a>
+            <a href="/courses" className="more-info">
+              LEARN MORE
+            </a>
           </div>
           <div className="explore-card">
             <h3>Stenography</h3>
             <p>Learn shorthand stenography for quick note-taking.</p>
-            <a href="/courses" className="more-info">LEARN MORE</a>
+            <a href="/courses" className="more-info">
+              LEARN MORE
+            </a>
           </div>
           <div className="explore-card">
             <h3>Web Designing</h3>
             <p>Get skilled in web design and create stunning websites.</p>
-            <a href="/courses" className="more-info">LEARN MORE</a>
+            <a href="/courses" className="more-info">
+              LEARN MORE
+            </a>
           </div>
         </div>
       </div>
 
       {/* Testimonials Section */}
       <div className="testimonials">
-        <h2>What Our Students Say</h2>
+        <p style={{ fontSize: "50px" }}>
+          <span
+            style={{ marginRight: "5px", color: "#1b439b", fontWeight: 400 }}
+          >
+            What Our{" "}
+          </span>
+          <span className="stroke">Student Say</span>
+        </p>
         <div className="testimonials-grid">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="testimonial-card">
@@ -106,7 +140,12 @@ const Home = () => {
 
       {/* Statistics Section */}
       <div className="statistics">
-        <h2>Statistics</h2>
+        <p style={{ fontSize: "50px" }}>
+          <span style={{ marginRight: "5px", color: "white", fontWeight: 400 }}>
+            STATIC
+          </span>
+          <span className="strokeStatictics">stics</span>
+        </p>
         <div className="stats-cards">
           <Slide triggerOnce direction="up">
             <div className="stats-card">
@@ -149,7 +188,11 @@ const Home = () => {
 
       {/* Join Us Section */}
       <div className="join-us">
-        <h2>Join Us</h2>
+      <p style={{ fontSize: "50px" }}>
+          <span style={{ marginRight: "5px", color: "#1b439b", fontWeight: 400 }}>
+            Learning@</span>
+          <span className="stroke">ATC</span>
+        </p>
         <form className="join-form">
           <input type="text" placeholder="Name" required />
           <input type="text" placeholder="Contact" required />
@@ -167,47 +210,79 @@ const Home = () => {
       </div>
 
       {/* Footer Section */}
-     
+
       <footer className="footer">
-  <div className="container">
-    <div className="footer-column logo-column">
-      <img src="/Assets/ULogo.jpeg" alt="Aggarwal Typing College" className="footer-logo" />
-    </div>
-    <div className="footer-column contact-column">
-      <h4>Contact Us</h4>
-      <address>
-        Aggarwal Typing College<br />
-        Palam Colony (Kailash Puri), Near JBM Public School<br />
-        Phone: <a href="tel:+918076307009">8076307009</a><br />
-        Email: <a href="mailto:info@aggarwaltypingcollege.com">info@aggarwaltypingcollege.com</a>
-      </address>
-    </div>
-    <div className="footer-column links-column">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About Us</a></li>
-        <li><a href="/courses">Courses</a></li>
-        <li><a href="/enquiry">Enquiry</a></li>
-        <li><a href="/admissionform">Admission Form</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </ul>
-    </div>
-    <div className="footer-column social-column">
-      <h4>Follow Us</h4>
-      <ul className="social-media">
-        <li><a href="/about"><i className="fab fa-facebook-f"></i></a></li>
-        <li><a href="/about"><i className="fab fa-twitter"></i></a></li>
-        <li><a href="/about"><i className="fab fa-instagram"></i></a></li>
-      </ul>
-    </div>
-  </div>
-  <div className="footer-bottom text-center">
-    <p>&copy; 2024 Sarawaswati Designs. All rights reserved.</p>
-  </div>
-</footer>
-
-
+        <div className="container">
+          <div className="footer-column logo-column">
+            <img
+              src="/Assets/ULogo.jpeg"
+              alt="Aggarwal Typing College"
+              className="footer-logo"
+            />
+          </div>
+          <div className="footer-column contact-column">
+            <h4>Contact Us</h4>
+            <address>
+              Aggarwal Typing College
+              <br />
+              Palam Colony (Kailash Puri), Near JBM Public School
+              <br />
+              Phone: <a href="tel:+918076307009">8076307009</a>
+              <br />
+              Email:{" "}
+              <a href="mailto:info@aggarwaltypingcollege.com">
+                info@aggarwaltypingcollege.com
+              </a>
+            </address>
+          </div>
+          <div className="footer-column links-column">
+            <h4>Quick Links</h4>
+            <ul>
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li>
+                <a href="/about">About Us</a>
+              </li>
+              <li>
+                <a href="/courses">Courses</a>
+              </li>
+              <li>
+                <a href="/enquiry">Enquiry</a>
+              </li>
+              <li>
+                <a href="/admissionform">Admission Form</a>
+              </li>
+              <li>
+                <a href="/contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div className="footer-column social-column">
+            <h4>Follow Us</h4>
+            <ul className="social-media">
+              <li>
+                <a href="/about">
+                  <i className="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li>
+                <a href="/about">
+                  <i className="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a href="/about">
+                  <i className="fab fa-instagram"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="footer-bottom text-center">
+          <p>&copy; 2024 Sarawaswati Designs. All rights reserved.</p>
+        </div>
+      </footer>
     </div>
   );
 };
