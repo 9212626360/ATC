@@ -373,4 +373,9 @@
   font-size: inherit; 
 }
 
+.iso-logo {
+  margin-top: 5px; /* Adjust spacing as needed */
+  max-width: 50px; /* Adjust size as needed */
+}
+
 

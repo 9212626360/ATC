@@ -1,7 +1,6 @@
-/* src/components/Courses.css */
 .courses {
   padding: 60px 0;
-  background-color: #f9f9f9;
+  background-color: #f4f4f4;
 }
 
 .courses h1 {
@@ -9,54 +8,111 @@
   color: #333;
   margin-bottom: 40px;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 .courses-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(6, 1fr); /* Display 6 courses per row */
   gap: 20px;
+  justify-items: center;
+  padding: 0 20px;
 }
 
 .course-card {
   background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+  max-width: 280px;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
 }
 
 .course-card:hover {
   transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
-.course-image-wrapper {
-  overflow: hidden;
-  height: 200px;
+.course-icon-wrapper {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f4f4f4;
 }
 
-.course-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s;
-}
-
-.course-card:hover .course-image {
-  transform: scale(1.1);
+.course-icon {
+  font-size: 3em;
+  color: #1b439b;
 }
 
 .course-content {
   padding: 20px;
-  text-align: center;
 }
 
 .course-content h3 {
   margin-bottom: 10px;
-  font-size: 1.5em;
+  font-size: 1.4em;
+  color: #222;
 }
 
 .course-content p {
-  font-size: 0.9em;
-  color: #666;
-  line-height: 1.5;
+  font-size: 1em;
+  color: #1b439b;
+  margin-bottom: 15px;
+}
+
+.course-details-btn {
+  background-color: #1b439b;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 1em;
+}
+
+.course-details-btn:hover {
+  background-color: #218838;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.close-modal-btn {
+  background-color: #1b439b;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 1em;
+}
+
+.close-modal-btn:hover {
+  background-color: #c82333;
 }

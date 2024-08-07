@@ -188,9 +188,12 @@ const Home = () => {
 
       {/* Join Us Section */}
       <div className="join-us">
-      <p style={{ fontSize: "50px" }}>
-          <span style={{ marginRight: "5px", color: "#1b439b", fontWeight: 400 }}>
-            Learning@</span>
+        <p style={{ fontSize: "50px" }}>
+          <span
+            style={{ marginRight: "5px", color: "#1b439b", fontWeight: 400 }}
+          >
+            Learning@
+          </span>
           <span className="stroke">ATC</span>
         </p>
         <form className="join-form">
@@ -219,6 +222,12 @@ const Home = () => {
               alt="Aggarwal Typing College"
               className="footer-logo"
             />
+            {/* ISO Certified Image */}
+            {/* <img
+              src="/Assets/ISO.webp"
+              alt="ISO Certified"
+              className="iso-logo"
+            /> */}
           </div>
           <div className="footer-column contact-column">
             <h4>Contact Us</h4>
